@@ -1,5 +1,5 @@
 variable "prefix" {
-  default = "demo"
+  default = "testing"
 }
 
 variable "location" {
