@@ -33,9 +33,9 @@ pipeline {
             }
         }
        
-        stage('terraform apply') {
+        stage('terraform destroy') {
            steps {
-               sh 'ls ./tf-jenkins-demo; sudo terraform apply -auto-approve ./tf-jenkins-demo'
+               sh 'ls ./tf-jenkins-demo; sudo terraform destroy -auto-approve ./tf-jenkins-demo'
             }
         }
         stage('terraform ended') {
