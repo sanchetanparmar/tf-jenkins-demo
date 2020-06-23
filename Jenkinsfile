@@ -32,6 +32,12 @@ pipeline {
                 sh 'ls ./tf-jenkins-demo; sudo terraform plan ./tf-jenkins-demo'
             }
         }
+       
+        stage('terraform plan') {
+           steps {
+               sh 'ls ./tf-jenkins-demo; sudo terraform apply -auto-approve ./tf-jenkins-demo'
+            }
+        }
         stage('terraform ended') {
             steps {
                 sh 'echo "Ended....!!"'
