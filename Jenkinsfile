@@ -33,7 +33,7 @@ pipeline {
             }
         }
        
-        stage('terraform plan') {
+        stage('terraform apply') {
            steps {
                sh 'ls ./tf-jenkins-demo; sudo terraform apply -auto-approve ./tf-jenkins-demo'
             }
