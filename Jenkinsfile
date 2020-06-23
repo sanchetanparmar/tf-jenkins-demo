@@ -4,7 +4,7 @@ pipeline {
  stages {
  stage(‘checkout’) {
  steps {
- git branch: ‘master’, url: ‘git@https://github.com/sanchetanparmar/tf-jenkins-demo.git’
+ git branch: ‘master’, url: ‘git@github.com/sanchetanparmar/tf-jenkins-demo.git’
  
  }
  }
