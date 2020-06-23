@@ -2,12 +2,11 @@ pipeline {
  agent any
  
  stages {
- stage(‘checkout’) {
- steps {
- git branch: ‘master’, url: ‘git@github.com/sanchetanparmar/tf-jenkins-demo.git’
- 
- }
- }
+ stage('git clone') {
+   steps {
+     sh 'sudo rm -r *;sudo git clone https://github.com/sanchetanparmar/tf-jenkins-demo.git'
+       }
+  }
  stage(‘Set Terraform path’) {
  steps {
  script {
