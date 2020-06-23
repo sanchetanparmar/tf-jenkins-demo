@@ -17,6 +17,11 @@ pipeline {
                 sh 'sudo rm -r *;sudo git clone https://github.com/sanchetanparmar/tf-jenkins-demo.git'
             }
         }
+        stage('copy vars') {
+           steps {
+               sh 'sudo cp /home/ubuntu/vars.tf ./tf-jenkins-demo'
+            }
+        }
         stage('terraform init') {
             steps {
                 sh 'sudo terraform init ./tf-jenkins-demo'
